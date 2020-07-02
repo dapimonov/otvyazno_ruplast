@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu'), url(../../fonts/ubuntu.woff) format('woff');
+}
+
+.App {
+  font-family: Ubuntu;
+  font-style: normal;
+
+  .black-button {
+    border: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    background: #1F2326;
+    border-radius: 3px;
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
+
+    &:hover {
+      background: #353A3E;
+    }
+
+    &:disabled {
+      color: #757F86;
+      background: #EBEBEB;
+    }
+
+    & > * {
+      vertical-align: middle;
+    }
+  }
+
+  .link-button {
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    color: #1F2326;
+    font-family: Ubuntu;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+
+    &:disabled {
+      color: #757F86;
+    }
+
+    & > * {
+      vertical-align: middle;
+    }
+  }
+
+  .header-component {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+  .smallHr {
+    border: none;
+    height: 1px;
+    width: 80px;
+    margin: 24px 0;
+    background-color: #1F2326;
+  }
+}

@@ -1,0 +1,89 @@
+.main-screen {
+  .content {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    .text {
+      margin-top: 224px;
+      width: fit-content;
+
+      h1 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        margin: 0;
+        color: #1F2326;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1F2326;
+        margin-bottom: 48px;
+      }
+
+      button {
+        margin-bottom: 62px;
+      }
+    }
+
+    .picture {
+      margin-top: 186px;
+      width: 500px;
+      height: 500px;
+      border: 10px solid #CDECF1;
+      box-sizing: border-box;
+      background-image: url("../../img/angles.jpeg");
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .list {
+        width: fit-content;
+        border: 1px solid #CDECF1;
+        background-color: #CDECF1;
+
+        ul {
+          padding: 0;
+          margin: 32px;
+        }
+
+        li {
+          list-style-type: none;
+          align-items: center;
+
+          &:not(:last-of-type) {
+            margin-bottom: 16px;
+          }
+
+          span {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 28px;
+            color: #1F2326;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .blue {
+    height: 228px;
+    width: 100%;
+    background-color: #CDECF1;
+    position: relative;
+    top: -116px;
+    z-index: -1;
+  }
+}
