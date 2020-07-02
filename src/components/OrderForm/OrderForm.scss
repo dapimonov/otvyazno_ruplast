@@ -1,0 +1,25 @@
+.order-form {
+  .form-input-wrapper {
+    &:not(:last-of-type) {
+      margin-bottom: 47px;
+    }
+  }
+  .submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+
+    .politics-text {
+      margin: 0 0 0 16px;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #757F86;
+
+      a {
+        color: #757F86;
+      }
+    }
+  }
+}

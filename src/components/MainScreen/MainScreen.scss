@@ -82,8 +82,9 @@
     height: 228px;
     width: 100%;
     background-color: #CDECF1;
-    position: relative;
-    top: -116px;
-    z-index: -1;
+    position: relative; // Для перекрытия картинкой
+    top: -116px; // Для перекрытия картинкой
+    margin-bottom: -116px; // Для перекрытия картинкой
+    z-index: -1; // Для перекрытия картинкой
   }
 }
