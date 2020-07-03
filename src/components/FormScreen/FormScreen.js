@@ -13,11 +13,7 @@ class FormScreen extends Component {
     return (
       <div className='form-screen'>
         <div className='content'>
-          <div className='form'>
-            <h4>Закажите бесплатные образцы</h4>
-            <p className='we-offer-text'>Мы бесплатно предоставляем 300 граммов добавки для испытаний.<br/>Этого количества хватит для 300-500 кг бетонной смеси.</p>
-            <OrderForm />
-          </div>
+          <OrderForm name={'order-form'}/>
           <div className='list'>
             <ul>
               <li><div className='circle'><Truck/></div><span className='circle-text'>Подходит для крупных заводов и<br/>частного строительства</span></li>

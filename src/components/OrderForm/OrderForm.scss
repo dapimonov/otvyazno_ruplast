@@ -1,24 +1,51 @@
 .order-form {
-  .form-input-wrapper {
-    &:not(:last-of-type) {
-      margin-bottom: 47px;
-    }
+  height: fit-content;
+  background-color: #FFFFFF;
+  border: 10px solid #CDECF1;
+  box-sizing: border-box;
+  padding: 48px 44px;
+
+  h4 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+    color: #1F2326;
   }
-  .submit-wrapper {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    align-items: center;
 
-    .politics-text {
-      margin: 0 0 0 16px;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 18px;
-      color: #757F86;
+  .we-offer-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #1F2326;
+    margin-top: 24px;
+    margin-bottom: 56px;
+  }
 
-      a {
+  .order-form-fields {
+    .form-input-wrapper {
+      &:not(:last-of-type) {
+        margin-bottom: 47px;
+      }
+    }
+    .submit-wrapper {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      align-items: center;
+
+      .politics-text {
+        margin: 0 0 0 16px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
         color: #757F86;
+
+        a {
+          color: #757F86;
+        }
       }
     }
   }
