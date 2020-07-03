@@ -3,7 +3,7 @@ import './FormScreen.scss';
 import { ReactComponent as Truck } from '../../svg/truck.svg';
 import { ReactComponent as Spoon } from '../../svg/spoon.svg';
 import { ReactComponent as Grain } from '../../svg/grain.svg';
-import { ReactComponent as Lorry } from '../../svg/grain.svg';
+import { ReactComponent as Lorry } from '../../svg/lorry.svg';
 import { ReactComponent as Support } from '../../svg/support.svg';
 import { ReactComponent as Hands } from '../../svg/hands.svg';
 import OrderForm from "../OrderForm/OrderForm";

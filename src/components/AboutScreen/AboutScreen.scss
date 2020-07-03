@@ -1,0 +1,42 @@
+.about-screen {
+  height: 800px;
+  box-sizing: border-box;
+  background-image: url("../../img/concrete2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about-window {
+    background: #FFFFFF;
+    border: 10px solid #CDECF1;
+    box-sizing: border-box;
+    max-width: 750px;
+    padding: 48px 32px;
+
+    h3 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 48px;
+      color: #1F2326;
+      text-align: center;
+    }
+
+    p {
+      margin-top: 32px;
+      margin-bottom: 40px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #1F2326;
+    }
+
+    .button-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

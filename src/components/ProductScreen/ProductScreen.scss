@@ -1,0 +1,129 @@
+.product-screen {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 150px;
+  padding-right: 150px;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 158px 0;
+
+    .text {
+      width: 555px;
+
+      h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        color: #1F2326;
+      }
+
+      h5 {
+        margin: 0 0 8px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        color: #1F2326;
+      }
+
+      p {
+        margin: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1F2326;
+
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+      }
+
+      ul {
+        padding: 0;
+        margin: 0 0 24px;
+      }
+
+      li {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        list-style-type: none;
+        align-items: center;
+        color: #1F2326;
+
+        &:before {
+          width: 4px;
+          height: 22px;
+          font-family: Ubuntu;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          color: #1F2326;
+          content: '·';
+          vertical-align: middle;
+          margin-right: 8px;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 8px;
+        }
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        align-items: center;
+
+        .download-icon {
+          margin-right: 10px;
+        }
+
+        .black-button {
+          margin-right: 25px;
+        }
+      }
+    }
+
+    .blue-info {
+      width: 360px;
+      height: fit-content;
+      background: #CDECF1;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 32px;
+      margin-left: 30px;
+
+      h6 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1F2326;
+      }
+
+      p {
+        margin: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1F2326;
+
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
