@@ -6,6 +6,8 @@ import FormScreen from "../../components/FormScreen/FormScreen";
 import ProductScreen from "../../components/ProductScreen/ProductScreen";
 import AboutScreen from "../../components/AboutScreen/AboutScreen";
 import ContactsScreen from "../../components/ContactsScreen/ContactsScreen";
+import MapScreen from "../../components/MapScreen/MapScreen";
+import Footer from "../../components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <ProductScreen />
       <AboutScreen />
       <ContactsScreen />
+      <MapScreen />
+      <Footer />
     </div>
   );
 }

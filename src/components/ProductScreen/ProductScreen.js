@@ -5,7 +5,7 @@ import {ReactComponent as Download} from "../../svg/downloads.svg";
 class ProductScreen extends Component {
   render() {
     return (
-      <div className='product-screen'>
+      <div className='product-screen aligned-content'>
         <div className='content'>
           <div className='text'>
             <h3>Добавка для ЖБИ</h3>

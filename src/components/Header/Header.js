@@ -33,11 +33,11 @@ class Header extends Component {
     return (
       <div className='header-component'>
         <div className='header-wrapper'>
-          <header className='header-bar'>
+          <header className='header-bar aligned-content'>
             <Logo className='logo' />
             <nav>
               <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
-              <a className='link-button' href='#about'>О добавках Рупласт</a>
+              <a className='link-button' href='#about'>О&nbsp;добавках Рупласт</a>
               <a className='link-button' href='#contacts'>Контакты</a>
               <a className='link-button question-button' href='#question'><Question className='question-icon' /><span>Задать вопрос</span></a>
               <button className='black-button order-button'>Заказать образец</button>

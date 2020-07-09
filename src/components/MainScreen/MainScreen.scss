@@ -1,14 +1,6 @@
 .main-screen {
   .content {
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding-left: 150px;
-    padding-right: 150px;
 
     .text {
       margin-top: 224px;

@@ -1,13 +1,8 @@
 .contacts-screen {
   .content {
-    max-width: 1440px;
     justify-content: space-between;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    padding: 120px 150px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 
     .text {
       h2 {

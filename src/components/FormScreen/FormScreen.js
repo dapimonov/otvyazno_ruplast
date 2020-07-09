@@ -12,7 +12,7 @@ class FormScreen extends Component {
   render() {
     return (
       <div className='form-screen'>
-        <div className='content'>
+        <div className='content aligned-content'>
           <OrderForm name={'order-form'}/>
           <div className='list'>
             <ul>

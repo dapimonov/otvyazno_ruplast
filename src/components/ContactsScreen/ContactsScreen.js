@@ -11,7 +11,7 @@ class ContactsScreen extends Component {
   render() {
     return (
       <div className='contacts-screen'>
-        <div className='content'>
+        <div className='content aligned-content'>
           <div className='text'>
             <h2>Контакты</h2>
             <hr className='smallHr'/>

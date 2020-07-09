@@ -6,9 +6,9 @@ class MainScreen extends Component {
   render() {
     return (
       <div className='main-screen'>
-        <div className='content'>
+        <div className='content aligned-content'>
           <div className='text'>
-            <h1>Контакты</h1>
+            <h1>Концентрированные<br/>добавки для бетона</h1>
             <hr className='smallHr'/>
             <p>
               Низкий расход, длительный срок хранения при любой<br/>температуре, доставка в любую точку России и СНГ от 25 кг

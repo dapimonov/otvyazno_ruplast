@@ -7,6 +7,17 @@
   font-family: Ubuntu;
   font-style: normal;
 
+  .aligned-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 150px;
+    padding-right: 150px;
+    flex-wrap: wrap;
+  }
+
   .black-button {
     border: none;
     box-sizing: border-box;
@@ -68,7 +79,8 @@
   .header-component {
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    z-index: 10;
   }
 
   .smallHr {
