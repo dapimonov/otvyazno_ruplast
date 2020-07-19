@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import MediaQuery from 'react-responsive';
 import { ReactComponent as Logo } from '../../svg/logo.svg';
 import { ReactComponent as Triangle } from '../../svg/triangle.svg';
 import { ReactComponent as Question } from '../../svg/question.svg';
 import './Header.scss';
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 class Header extends Component {
   constructor(props) {
@@ -35,13 +37,18 @@ class Header extends Component {
         <div className='header-wrapper'>
           <header className='header-bar aligned-content'>
             <Logo className='logo' />
-            <nav>
-              <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
-              <a className='link-button' href='#about'>О&nbsp;добавках Рупласт</a>
-              <a className='link-button' href='#contacts'>Контакты</a>
-              <a className='link-button question-button' href='#question'><Question className='question-icon' /><span>Задать вопрос</span></a>
-              <button className='black-button order-button'>Заказать образец</button>
-            </nav>
+            <MediaQuery minWidth={1024}>
+              <nav>
+                <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
+                <a className='link-button' href='#about'>О&nbsp;добавках Рупласт</a>
+                <a className='link-button' href='#contacts'>Контакты</a>
+                <a className='link-button question-button' href='#question'><Question className='question-icon' /><span>Задать вопрос</span></a>
+                <button className='black-button order-button'>Заказать образец</button>
+              </nav>
+            </MediaQuery>
+            <MediaQuery maxWidth={1023}>
+              <BurgerMenu />
+            </MediaQuery>
           </header>
         </div>
         {

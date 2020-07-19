@@ -10,11 +10,10 @@
   .aligned-content {
     display: flex;
     flex-direction: row;
-    max-width: 1440px;
+    max-width: 1140px;
     margin: auto;
-    box-sizing: border-box;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 32px;
+    padding-right: 32px;
     flex-wrap: wrap;
   }
 
@@ -89,5 +88,13 @@
     width: 80px;
     margin: 24px 0;
     background-color: #1F2326;
+  }
+
+  .bigHr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #F3F2F2;
   }
 }

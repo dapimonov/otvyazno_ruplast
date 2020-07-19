@@ -1,0 +1,154 @@
+.burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .burger-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .burger-fade {
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 35, 38, 0.3);
+    position: fixed;
+    top: 96px;
+    right: 0;
+    display: none;
+  }
+
+  .burger-container {
+    min-width: 320px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 96px;
+    right: 0;
+    height: 0;
+    transition: .5s;
+    transition-delay: .2s;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    opacity: 0;
+
+    .bottom-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & > * {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  .burger-list {
+    transition: .5s;
+    transition-delay: .5s;
+    list-style: none;
+    padding-left: 0;
+
+    .burger-link  {
+      line-height: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 12px;
+      }
+
+      span:only-child:before {
+        width: 4px;
+        height: 22px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1F2326;
+        content: '·';
+        vertical-align: middle;
+        margin-left: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .burger-icon {
+    display: block;
+    position: relative;
+    background: #1F2326;
+    width: 90%;
+    height: 4px;
+    transition: .4s;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #1F2326;
+      width: 100%;
+      height: 4px;
+      transition: .4s;
+    }
+    &::after {
+      top: 8px;
+    }
+    &::before {
+      top: -8px;
+    }
+  }
+
+  .burger-checkbox {
+    display: none;
+
+    &:checked ~ {
+      .burger-fade {
+        display: block;
+      }
+
+      .burger-container {
+        opacity: 1;
+        height: calc(100% - 96px);
+        transition-delay: 0s;
+      }
+
+      .burger-button {
+        .burger-icon {
+          background: transparent;
+
+          &::before,
+          &::after {
+            top: 0;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+
+          &::before {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
