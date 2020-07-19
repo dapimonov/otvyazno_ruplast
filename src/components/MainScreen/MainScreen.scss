@@ -4,7 +4,8 @@
 
     .text {
       margin-top: 224px;
-      width: fit-content;
+      margin-right: 32px;
+      max-width: 400px;
 
       h1 {
         font-weight: bold;
@@ -24,6 +25,32 @@
 
       button {
         margin-bottom: 62px;
+      }
+
+      @media (max-width: 1023px) {
+        margin-top: 144px;
+        margin-right: 0;
+        text-align: center;
+
+        p {
+          margin-bottom: 32px;
+        }
+
+        .smallHr {
+          margin: 16px auto;
+        }
+      }
+
+      @media (max-width: 425px) {
+        h1 {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
 
@@ -66,7 +93,47 @@
             margin-left: 16px;
           }
         }
+
+        @media (max-width: 425px) {
+          border-radius: 5px;
+
+          ul {
+            margin: 16px;
+          }
+
+          li {
+            &:not(:last-of-type) {
+              margin-bottom: 20px;
+            }
+
+            span {
+              font-weight: bold;
+              font-size: 12px;
+              line-height: 20px;
+            }
+          }
+        }
       }
+
+      .order-button {
+        margin-top: 32px;
+        margin-bottom: 48px;
+      }
+
+      @media (max-width: 1023px) {
+        margin-top: 0;
+      }
+
+      @media (max-width: 425px) {
+        border: none;
+        background: none;
+        height: fit-content;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -78,5 +145,9 @@
     top: -116px; // Для перекрытия картинкой
     margin-bottom: -116px; // Для перекрытия картинкой
     z-index: -1; // Для перекрытия картинкой
+
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }

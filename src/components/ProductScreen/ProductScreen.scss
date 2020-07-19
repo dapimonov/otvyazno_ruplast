@@ -9,7 +9,7 @@
     padding: 158px 0;
 
     .text {
-      width: 555px;
+      max-width: 555px;
 
       h3 {
         margin: 0;
@@ -89,7 +89,7 @@
     }
 
     .blue-info {
-      width: 360px;
+      max-width: 360px;
       height: fit-content;
       background: #CDECF1;
       box-sizing: border-box;
