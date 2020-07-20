@@ -7,13 +7,16 @@ import { ReactComponent as Lorry } from '../../svg/lorry.svg';
 import { ReactComponent as Support } from '../../svg/support.svg';
 import { ReactComponent as Hands } from '../../svg/hands.svg';
 import OrderForm from "../OrderForm/OrderForm";
+import MediaQuery from "react-responsive";
 
 class FormScreen extends Component {
   render() {
     return (
       <div className='form-screen'>
         <div className='content aligned-content'>
-          <OrderForm name={'order-form'}/>
+          <MediaQuery minWidth={1024}>
+            <OrderForm name={'order-form'}/>
+          </MediaQuery>
           <div className='list'>
             <ul>
               <li><div className='circle'><Truck/></div><span className='circle-text'>Подходит для крупных заводов и<br/>частного строительства</span></li>

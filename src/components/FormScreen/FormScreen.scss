@@ -1,13 +1,14 @@
 .form-screen {
-  height: 800px;
   box-sizing: border-box;
   background-image: url("../../img/concrete1.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 95px;
+  padding: 95px 0;
 
   .content {
+    flex-wrap: nowrap;
+
     .list {
       ul {
         padding: 0;
@@ -25,8 +26,8 @@
         }
 
         .circle {
-          width: 64px;
-          height: 64px;
+          min-width: 64px;
+          min-height: 64px;
           border-radius: 32px;
           background: #CDECF1;
           display: flex;
@@ -42,6 +43,50 @@
           margin-left: 24px;
         }
       }
+
+      @media (max-width: 1023px) {
+        ul {
+          margin-left: auto;
+        }
+      }
+
+      @media (max-width: 425px) {
+        li {
+          &:not(:last-of-type) {
+            margin-bottom: 24px;
+          }
+
+          .circle {
+            min-width: 56px;
+            min-height: 56px;
+            border-radius: 28px;
+          }
+
+          br {
+            content: " ";
+
+            &:after {
+              content: " ";
+            }
+          }
+
+          span {
+            font-size: 12px;
+            line-height: 20px;
+            margin-left: 16px;
+          }
+        }
+      }
     }
+
+    @media (max-width: 1023px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 48px 0;
+    border-bottom: 8px solid #CDECF1;;
   }
 }
