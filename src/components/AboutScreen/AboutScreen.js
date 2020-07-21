@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import './AboutScreen.scss';
+import MediaQuery from "react-responsive";
+import OrderForm from "../OrderForm/OrderForm";
 
 class AboutScreen extends Component {
   render() {
     return (
       <div className='about-screen'>
+        <MediaQuery maxWidth={425}>
+          <OrderForm name={'order-form'}/>
+        </MediaQuery>
         <div className='about-window'>
           <h3>О добавках Рупласт</h3>
+          <MediaQuery maxWidth={425}>
+            <hr className='smallHr'/>
+          </MediaQuery>
           <p>
             Рупласт — это зарегистрированный российский торговый знак.
             Под маркой Рупласт на ведущих предприятиях Китая производят химические вещества, разработанные специально

@@ -1,6 +1,7 @@
 .contacts-screen {
   .content {
     justify-content: space-between;
+    flex-wrap: nowrap;
     padding-top: 120px;
     padding-bottom: 120px;
 
@@ -38,8 +39,8 @@
           }
 
           .circle {
-            width: 40px;
-            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
             border-radius: 20px;
             background: #CDECF1;
             display: flex;
@@ -55,11 +56,61 @@
             margin-left: 24px;
           }
         }
+
+        @media (max-width: 425px) {
+          li {
+            span {
+              font-size: 12px;
+              margin-left: 16px;
+            }
+          }
+        }
       }
 
       .nhk {
         margin-top: 90px;
+
+        @media (max-width: 1023px) {
+          margin-top: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
+
+      @media (max-width: 1023px) {
+        margin: auto;
+      }
+
+      @media (max-width: 425px) {
+        h2 {
+          font-size: 18px;
+          line-height: 24px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        .smallHr {
+          margin: 24px auto;
+        }
+
+        br {
+          content: " ";
+
+          &:after {
+            content: " ";
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
 }

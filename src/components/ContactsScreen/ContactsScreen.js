@@ -6,6 +6,7 @@ import { ReactComponent as Laptop } from '../../svg/laptop.svg';
 import { ReactComponent as Phone } from '../../svg/phone.svg';
 import { ReactComponent as NHK } from '../../svg/nhk.svg';
 import OrderForm from "../OrderForm/OrderForm";
+import MediaQuery from "react-responsive";
 
 class ContactsScreen extends Component {
   render() {
@@ -26,9 +27,13 @@ class ContactsScreen extends Component {
                 <li><div className='circle'><Pin/></div><span className='circle-text'>ООО «Новые химические компоненты»<br/> 630083, Россия, г. Новосибирск, ул. Большевистская, д. 92, оф. 6-1-18</span></li>
               </ul>
             </div>
-            <NHK className='nhk'/>
+            <div className='nhk'>
+              <NHK />
+            </div>
           </div>
-          <OrderForm name={'order-contacts'}/>
+          <MediaQuery minWidth={1024}>
+            <OrderForm name={'order-form'}/>
+          </MediaQuery>
         </div>
       </div>
     )
