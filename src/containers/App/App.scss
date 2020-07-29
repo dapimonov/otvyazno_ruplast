@@ -76,6 +76,7 @@
 
     &:hover {
       text-decoration-line: underline;
+      -webkit-text-decoration-line: underline;
     }
 
     &:disabled {

@@ -36,7 +36,9 @@ class Header extends Component {
       <div className='header-component'>
         <div className='header-wrapper'>
           <header className='header-bar aligned-content'>
-            <Logo className='logo' />
+            <div className='logo-wrapper'>
+              <Logo className='logo' />
+            </div>
             <MediaQuery minWidth={1024}>
               <nav>
                 <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>

@@ -35,10 +35,12 @@
         margin-left: 87px;
       }
     }
-
-    .logo {
-      min-width: 213px;
+    .logo-wrapper {
       display: flex;
+
+      @media (max-width: 425px) {
+        max-width: 120px;
+      }
     }
 
     .triangle-icon {
@@ -47,6 +49,10 @@
 
     .question-icon {
       margin-right: 8px;
+    }
+
+    @media (max-width: 425px) {
+      height: 68px;
     }
   }
 
