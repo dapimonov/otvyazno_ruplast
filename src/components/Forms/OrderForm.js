@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './OrderForm.scss';
+import './Forms.scss';
 import FormField from "../FormField/FormField";
 
 class OrderForm extends Component {
   render() {
     return (
-      <div className='order-form'>
+      <div className='user-form'>
         <h4>Закажите бесплатные образцы</h4>
         <p className='we-offer-text'>Мы бесплатно предоставляем 300 граммов добавки для испытаний.<br/>Этого количества хватит для 300-500 кг бетонной смеси.</p>
-        <div className='order-form-fields'>
+        <div className='user-form-fields'>
           <FormField
             label={'Имя и отчество'}
             name={this.props.name}

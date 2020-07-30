@@ -4,7 +4,6 @@
 
   .form-input {
     width: 100%;
-    height: 53px;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
     border-radius: 5px;
@@ -17,6 +16,7 @@
     font-size: 14px;
     line-height: 22px;
     color: #1F2326;
+    resize: none;
 
     &:focus {
       outline: none;

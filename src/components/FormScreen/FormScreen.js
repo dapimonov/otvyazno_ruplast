@@ -6,7 +6,7 @@ import { ReactComponent as Grain } from '../../svg/grain.svg';
 import { ReactComponent as Lorry } from '../../svg/lorry.svg';
 import { ReactComponent as Support } from '../../svg/support.svg';
 import { ReactComponent as Hands } from '../../svg/hands.svg';
-import OrderForm from "../OrderForm/OrderForm";
+import OrderForm from "../Forms/OrderForm";
 import MediaQuery from "react-responsive";
 
 class FormScreen extends Component {

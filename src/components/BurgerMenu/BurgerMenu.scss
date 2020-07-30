@@ -73,7 +73,6 @@
     transition-delay: .5s;
     list-style: none;
     padding-left: 0;
-    overflow: scroll;
 
     .burger-link  {
       line-height: 20px;
@@ -99,6 +98,10 @@
         margin-left: 0;
         margin-right: 20px;
       }
+    }
+
+    @media (max-width: 425px) {
+      overflow: scroll;
     }
   }
 

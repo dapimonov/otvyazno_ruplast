@@ -5,7 +5,7 @@ import { ReactComponent as Plane } from '../../svg/plane.svg';
 import { ReactComponent as Laptop } from '../../svg/laptop.svg';
 import { ReactComponent as Phone } from '../../svg/phone.svg';
 import { ReactComponent as NHK } from '../../svg/nhk.svg';
-import OrderForm from "../OrderForm/OrderForm";
+import OrderForm from "../Forms/OrderForm";
 import MediaQuery from "react-responsive";
 
 class ContactsScreen extends Component {

@@ -44,12 +44,12 @@ class Header extends Component {
                 <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
                 <a className='link-button' href='#about'>О&nbsp;добавках Рупласт</a>
                 <a className='link-button' href='#contacts'>Контакты</a>
-                <a className='link-button question-button' href='#question'><Question className='question-icon' /><span>Задать вопрос</span></a>
-                <button className='black-button order-button'>Заказать образец</button>
+                <button className='link-button question-button' href='#question' onClick={this.props.openQuestion}><Question className='question-icon' /><span>Задать вопрос</span></button>
+                <button className='black-button order-button' onClick={this.props.openOrder}>Заказать образец</button>
               </nav>
             </MediaQuery>
             <MediaQuery maxWidth={1023}>
-              <BurgerMenu />
+              <BurgerMenu openOrder={this.props.openOrder} openQuestion={this.props.openQuestion}/>
             </MediaQuery>
           </header>
         </div>

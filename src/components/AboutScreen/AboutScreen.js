@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AboutScreen.scss';
 import MediaQuery from "react-responsive";
-import OrderForm from "../OrderForm/OrderForm";
+import OrderForm from "../Forms/OrderForm";
 
 class AboutScreen extends Component {
   render() {
@@ -28,7 +28,7 @@ class AboutScreen extends Component {
             транспортной компаней до ближайшего к вам терминала.
           </p>
           <div className='button-wrapper'>
-            <button className='black-button order-button'>Заказать бесплатный образец</button>
+            <button className='black-button order-button' onClick={this.props.openOrder}>Заказать бесплатный образец</button>
           </div>
         </div>
       </div>

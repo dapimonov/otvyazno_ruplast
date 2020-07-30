@@ -47,7 +47,7 @@ class ProductScreen extends Component {
       const context = this;
       const args = arguments;
       args[0].persist();
-      args[0].preventDefault();
+      // args[0].preventDefault();
 
       const later = function() {
         timeout = null;
@@ -116,7 +116,7 @@ class ProductScreen extends Component {
                     <h5>{this.props.products[current].model}</h5>
                     {this.props.products[current].contentNode}
                     <div className='buttons-wrapper'>
-                      <button className='black-button order-button'>Заказать бесплатный образец</button>
+                      <button className='black-button order-button' onClick={this.props.openOrder}>Заказать бесплатный образец</button>
                       <a className='link-button' href='#download'><Download className='download-icon' /><span>Скачать технический паспорт</span></a>
                     </div>
                   </div>
@@ -173,7 +173,7 @@ class ProductScreen extends Component {
                           <span>{this.state.descriptionOpened.has(index) ? 'Скрыть' : 'Показать'} описание</span>
                         </button>
                       </MediaQuery>
-                      <button className='black-button order-button'>Заказать бесплатный образец</button>
+                      <button className='black-button order-button' onClick={this.props.openOrder}>Заказать бесплатный образец</button>
                       <a className='link-button' href='#download'><Download className='download-icon' /><span>Скачать технический паспорт</span></a>
                     </div>
                   </div>

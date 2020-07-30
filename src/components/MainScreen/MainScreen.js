@@ -15,7 +15,7 @@ class MainScreen extends Component {
               Низкий расход, длительный срок хранения при любой температуре, доставка в любую точку России и СНГ от 25 кг
             </p>
             <MediaQuery minWidth={426}>
-              <button className='black-button order-button'>Заказать бесплатный образец</button>
+              <button className='black-button order-button' onClick={this.props.openOrder}>Заказать бесплатный образец</button>
             </MediaQuery>
           </div>
           <div className='picture'>
@@ -29,7 +29,7 @@ class MainScreen extends Component {
               </ul>
             </div>
             <MediaQuery maxWidth={425}>
-              <button className='black-button order-button'>Заказать бесплатный образец</button>
+              <button className='black-button order-button' onClick={this.props.openOrder}>Заказать бесплатный образец</button>
             </MediaQuery>
           </div>
         </div>

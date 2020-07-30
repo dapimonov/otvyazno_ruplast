@@ -1,4 +1,4 @@
-.order-form {
+.user-form {
   height: fit-content;
   background-color: #FFFFFF;
   border: 10px solid #CDECF1;
@@ -30,7 +30,7 @@
     }
   }
 
-  .order-form-fields {
+  .user-form-fields {
     .form-input-wrapper {
       &:not(:last-of-type) {
         margin-bottom: 47px;

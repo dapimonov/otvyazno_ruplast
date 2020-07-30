@@ -58,8 +58,8 @@ class BurgerMenu extends Component {
             <hr className='bigHr'/>
           </ul>
           <div className='bottom-buttons'>
-            <a className='link-button question-button' href='#question'><Question className='question-icon' /><span>Задать вопрос</span></a>
-            <button className='black-button order-button'>Заказать образец</button>
+            <button className='link-button question-button' href='#question' onClick={this.props.openQuestion}><Question className='question-icon' /><span>Задать вопрос</span></button>
+            <button className='black-button order-button' onClick={this.props.openOrder}>Заказать образец</button>
           </div>
         </div>
       </div>
