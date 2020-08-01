@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/otvyazno_ruplast/precache-manifest.8d5f1c9f3187ac6e7ce7c79aee835ba0.js"
+  "/otvyazno_ruplast/precache-manifest.5a13c7dc3fc22d9e92f0197d084768a0.js"
 );
 
 self.addEventListener('message', (event) => {

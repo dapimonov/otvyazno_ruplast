@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fd787300021a79d580cdf10954d8aed",
+    "revision": "3e9e2dc37c7e03c3a43f54b04cd157aa",
     "url": "/otvyazno_ruplast/index.html"
   },
   {
-    "revision": "8d3d57c9f686b43368ab",
-    "url": "/otvyazno_ruplast/static/css/main.abe2b2df.chunk.css"
+    "revision": "9913c4c1a836880f27e2",
+    "url": "/otvyazno_ruplast/static/css/main.1f926fb5.chunk.css"
   },
   {
     "revision": "ff94766897e048e6341c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/otvyazno_ruplast/static/js/2.3022ad23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d3d57c9f686b43368ab",
-    "url": "/otvyazno_ruplast/static/js/main.9f2856fd.chunk.js"
+    "revision": "9913c4c1a836880f27e2",
+    "url": "/otvyazno_ruplast/static/js/main.6e220fd6.chunk.js"
   },
   {
     "revision": "bba2253f5294ed5eed1d",
