@@ -33,7 +33,11 @@ class PopUp extends Component {
         {this.props.active &&
           <div className='pop-up' ref={this.backgroundRef}>
           <div className='child-wrapper'>
-            {this.props.cross && <div className='cross' ref={this.crossRef} />}
+            {this.props.cross &&
+              <div className='cross-wrapper' ref={this.crossRef} >
+                <div className='cross'/>
+              </div>
+            }
             {this.props.children}
           </div>
         </div>}

@@ -36,11 +36,11 @@ class BurgerMenu extends Component {
     return (
       <div className='burger-menu'>
         <input type='checkbox' id='checkbox' className='burger-checkbox' ref={this.checkboxRef}/>
-        <label htmlFor='checkbox' className='burger-button'>
+        <label htmlFor='checkbox' className='burger-button' ref={this.containerRef}>
           <div className='burger-icon' ref={this.iconRef}></div>
         </label>
         <div className='burger-fade'></div>
-        <div className='burger-container' ref={this.containerRef}>
+        <div className='burger-container' >
           <ul className='burger-list'>
             <hr className='bigHr'/>
             <li className='burger-link'><Notebook width='20px' height='20px' viewBox="0 0 20 20"/><span><a className='link-button' href='#catalog'>Каталог</a></span></li>
