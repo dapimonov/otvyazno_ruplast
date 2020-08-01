@@ -44,17 +44,17 @@ class BurgerMenu extends Component {
           <ul className='burger-list'>
             <hr className='bigHr'/>
             <li className='burger-link'><Notebook width='20px' height='20px' viewBox="0 0 20 20"/><span><a className='link-button' href='#catalog'>Каталог</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product1'>Для ЖБИ</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product2'>Для товарного бетона</a></span></li>
-            <li className='burger-link' ><span><a className='link-button' href='#product3'>Для вибропресса</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product4'>Для вибролитья</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product5'>Пигменты для бетона</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product6'>Для наливных полов</a></span></li>
-            <li className='burger-link'><span><a className='link-button' href='#product7'>Для пенобетона</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product0' onClick={() => this.props.setProduct(0)}>Для ЖБИ</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product1' onClick={() => this.props.setProduct(1)}>Для товарного бетона</a></span></li>
+            <li className='burger-link' ><span><a className='link-button' href='#product2' onClick={() => this.props.setProduct(2)}>Для вибролитья</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product3' onClick={() => this.props.setProduct(3)}>Для вибропресса</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product4' onClick={() => this.props.setProduct(4)}>Пигменты для бетона</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product5' onClick={() => this.props.setProduct(5)}>Для наливных полов</a></span></li>
+            <li className='burger-link'><span><a className='link-button' href='#product6' onClick={() => this.props.setProduct(6)}>Для пенобетона</a></span></li>
             <hr className='bigHr'/>
-            <li className='burger-link'><Grain width='20px' height='20px'/><span><a className='link-button' href='#about'>О добавках Рупласт</a></span></li>
+            <li className='burger-link'><Grain width='20px' height='20px'/><span><a className='link-button' href='#about' onClick={this.props.scrollToAbout}>О добавках Рупласт</a></span></li>
             <hr className='bigHr'/>
-            <li className='burger-link'><Call width='20px' height='20px'/><span><a className='link-button' href='#contacts'>Контакты</a></span></li>
+            <li className='burger-link'><Call width='20px' height='20px'/><span><a className='link-button' href='#contacts' onClick={this.props.scrollToContacts}>Контакты</a></span></li>
             <hr className='bigHr'/>
           </ul>
           <div className='bottom-buttons'>

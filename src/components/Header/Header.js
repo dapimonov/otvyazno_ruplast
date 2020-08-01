@@ -31,6 +31,11 @@ class Header extends Component {
     });
   };
 
+  chooseProduct = (index) => {
+    this.props.scrollToProducts();
+    this.props.setProduct(index);
+  };
+
   render() {
     return (
       <div className='header-component'>
@@ -41,15 +46,21 @@ class Header extends Component {
             </div>
             <MediaQuery minWidth={1024}>
               <nav>
-                <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
-                <a className='link-button' href='#about'>О&nbsp;добавках Рупласт</a>
-                <a className='link-button' href='#contacts'>Контакты</a>
+                <a className='link-button' href='#catalog' onMouseEnter={this.enterDropdown} onMouseLeave={this.leaveDropdown} onClick={this.props.scrollToProducts} ref={this.dropdownRef}><Triangle className='triangle-icon' />Каталог</a>
+                <a className='link-button' href='#about' onClick={this.props.scrollToAbout}>О&nbsp;добавках Рупласт</a>
+                <a className='link-button' href='#contacts' onClick={this.props.scrollToContacts}>Контакты</a>
                 <button className='link-button question-button' href='#question' onClick={this.props.openQuestion}><Question className='question-icon' /><span>Задать вопрос</span></button>
                 <button className='black-button order-button' onClick={this.props.openOrder}>Заказать образец</button>
               </nav>
             </MediaQuery>
             <MediaQuery maxWidth={1023}>
-              <BurgerMenu openOrder={this.props.openOrder} openQuestion={this.props.openQuestion}/>
+              <BurgerMenu
+                openOrder={this.props.openOrder}
+                openQuestion={this.props.openQuestion}
+                scrollToAbout={this.props.scrollToAbout}
+                scrollToContacts={this.props.scrollToContacts}
+                setProduct={this.chooseProduct}
+              />
             </MediaQuery>
           </header>
         </div>
@@ -65,13 +76,13 @@ class Header extends Component {
                 }}
               >
                 <ul>
-                  <li><a className='link-button' href='#product1'>Для ЖБИ</a></li>
-                  <li><a className='link-button' href='#product2'>Для товарного бетона</a></li>
-                  <li><a className='link-button' href='#product3'>Для вибропресса</a></li>
-                  <li><a className='link-button' href='#product4'>Для вибролитья</a></li>
-                  <li><a className='link-button' href='#product5'>Пигменты для бетона</a></li>
-                  <li><a className='link-button' href='#product6'>Для наливных полов</a></li>
-                  <li><a className='link-button' href='#product7'>Для пенобетона</a></li>
+                  <li><a className='link-button' href='#product0' onClick={() => this.chooseProduct(0)}>Для ЖБИ</a></li>
+                  <li><a className='link-button' href='#product1' onClick={() => this.chooseProduct(1)}>Для товарного бетона</a></li>
+                  <li><a className='link-button' href='#product2' onClick={() => this.chooseProduct(2)}>Для вибролитья</a></li>
+                  <li><a className='link-button' href='#product3' onClick={() => this.chooseProduct(3)}>Для вибропресса</a></li>
+                  <li><a className='link-button' href='#product4' onClick={() => this.chooseProduct(4)}>Пигменты для бетона</a></li>
+                  <li><a className='link-button' href='#product5' onClick={() => this.chooseProduct(5)}>Для наливных полов</a></li>
+                  <li><a className='link-button' href='#product6' onClick={() => this.chooseProduct(6)}>Для пенобетона</a></li>
                 </ul>
               </div>
             )

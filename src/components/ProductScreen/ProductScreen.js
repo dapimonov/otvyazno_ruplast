@@ -9,34 +9,19 @@ class ProductScreen extends Component {
     super(props);
 
     this.state = {
-      current: 0,
+      // current: 0,
       descriptionOpened: new Set(),
     };
 
     this.contentRef = React.createRef();
     this.descriptionRef = React.createRef();
     this.screenRef = React.createRef();
-    this.myWheelChecker = this.makeWheelChecker();
+    this.productsRefs = this.props.products.map(() => React.createRef());
   }
 
-  // componentDidMount() {
-  //   if (this.screenRef.current) {
-  //     this.screenRef.current.addEventListener('wheel', this.debounce(this.wheelHandler, 100));
-  //   }
-  // }
-  //
-  // componentWillUnmount() {
-  //   if (this.screenRef.current) {
-  //     this.screenRef.current.removeEventListener('wheel', this.debounce(this.wheelHandler, 100));
-  //   }
-  // }
-
-
-  makeWheelChecker() {
-    this.deltas = [];
-    return function(delta) {
-      this.deltas.push(delta);
-      return this.deltas
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.current !== prevProps.current && window.innerWidth < 1024) {
+      this.scrollToProduct(this.props.current);
     }
   }
 
@@ -61,27 +46,16 @@ class ProductScreen extends Component {
   };
 
   itemClickHandler = (index) => {
-    this.setState({
-      ...this.state,
-      current: index,
-    });
+    this.props.setProduct(index);
   };
 
   wheelHandler = (e) => {
     // console.log(this.myWheelChecker(e.deltaY));
-    if (e.deltaY < 0 && this.state.current > 0) {
-      e.preventDefault();
-      this.setState({
-        ...this.state,
-        current: this.state.current-1,
-      });
+    if (e.deltaY < 0 && this.props.current > 0) {
+      this.props.setProduct(this.props.current-1);
     }
-    else if (e.deltaY > 0 && this.state.current < this.props.products.length-1) {
-      e.preventDefault();
-      this.setState({
-        ...this.state,
-        current: this.state.current+1,
-      });
+    else if (e.deltaY > 0 && this.props.current < this.props.products.length-1) {
+      this.props.setProduct(this.props.current+1);
     }
   };
 
@@ -95,8 +69,15 @@ class ProductScreen extends Component {
     })
   };
 
+  scrollToProduct = (index) => {
+    this.productsRefs[index].current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   render() {
-    const {current} = this.state;
+    const {current} = this.props;
 
     return (
       <>
@@ -104,7 +85,7 @@ class ProductScreen extends Component {
           <div className='product-screen aligned-content' onWheel={this.debounce(this.wheelHandler, 100)} ref={this.screenRef}>
             <SwitchTransition>
               <CSSTransition
-                key={this.state.current}
+                key={current}
                 nodeRef={this.contentRef}
                 timeout={400}
                 classNames="fade"
@@ -132,7 +113,7 @@ class ProductScreen extends Component {
                   this.props.products.map((product, index) =>
                     <li
                       key={index}
-                      className={index === this.state.current ? 'active-li' : 'inactive-li'}
+                      className={index === current ? 'active-li' : 'inactive-li'}
                       onClick={() => this.itemClickHandler(index)}
                     >
                       {product.shortName}
@@ -146,7 +127,7 @@ class ProductScreen extends Component {
         <MediaQuery maxWidth={1023}>
           {
             this.props.products.map((product, index) =>
-              <div className='product-screen aligned-content' ref={this.screenRef} key={index}>
+              <div className='product-screen aligned-content' ref={this.productsRefs[index]} key={index}>
                 <div className='content' ref={this.contentRef}>
                   <div className='text'>
                     <h3>{product.name}</h3>

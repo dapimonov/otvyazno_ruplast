@@ -17,10 +17,22 @@ class App extends Component {
     super(props);
 
     this.state = {
+      currentProduct: 0,
       questionOpened: false,
       orderOpened: false,
     };
+
+    this.aboutRef = React.createRef();
+    this.contactsRef = React.createRef();
+    this.productsRef = React.createRef();
   }
+
+  setProduct = (index) => {
+    this.setState({
+      ...this.state,
+      currentProduct: index,
+    });
+  };
 
   handleClose = (type) => {
     this.setState({
@@ -35,6 +47,14 @@ class App extends Component {
       [type]: true,
     })
   };
+
+  scrollToRef = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
 
   render() {
     const products = [
@@ -226,12 +246,32 @@ class App extends Component {
         >
           <QuestionForm name={'question-form'}/>
         </PopUp>
-        <Header openOrder={() => this.openPopUp('orderOpened')} openQuestion={() => this.openPopUp('questionOpened')}/>
+        <Header
+          openOrder={() => this.openPopUp('orderOpened')}
+          openQuestion={() => this.openPopUp('questionOpened')}
+          scrollToAbout={() => this.scrollToRef(this.aboutRef)}
+          scrollToContacts={() => this.scrollToRef(this.contactsRef)}
+          scrollToProducts={() => this.scrollToRef(this.productsRef)}
+          setProduct={this.setProduct}
+        />
         <MainScreen openOrder={() => this.openPopUp('orderOpened')}/>
         <FormScreen/>
-        <ProductScreen products={products} openOrder={() => this.openPopUp('orderOpened')}/>
-        <AboutScreen openOrder={() => this.openPopUp('orderOpened')}/>
-        <ContactsScreen/>
+        <div ref={this.productsRef}>
+          <ProductScreen
+            products={products}
+            current={this.state.currentProduct}
+            setProduct={this.setProduct}
+            openOrder={() => this.openPopUp('orderOpened')}
+          />
+        </div>
+        <div ref={this.aboutRef}>
+          <AboutScreen
+            openOrder={() => this.openPopUp('orderOpened')}
+          />
+        </div>
+        <div ref={this.contactsRef}>
+          <ContactsScreen/>
+        </div>
         <MapScreen/>
         <Footer/>
       </div>
